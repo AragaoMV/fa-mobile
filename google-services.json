@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "279910881732",
+    "project_id": "fa-mobile-5f33e",
+    "storage_bucket": "fa-mobile-5f33e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279910881732:android:73ed660e0e70ca4b13ec91",
+        "android_client_info": {
+          "package_name": "com.aragaomarcos.famobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtHMByEP0_WNSWSB-yqd9T4O0KwlNzaBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
