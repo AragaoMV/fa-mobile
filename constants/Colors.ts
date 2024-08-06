@@ -1,26 +1,44 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
+const paperwhite = '#E9E7E2';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+const neutral100 = '#FEFEFC';
+const neutral300 = '#F3F2EC';
+const neutral500 = '#292929';
+const neutral700 = '#1D1416';
+const neutral900 = '#13070B';
+
+const main100 = '#D5FCD5';
+const main300 = '#7FF196';
+const main500 = '#2DD36F';
+const main700 = '#169763';
+const main900 = '#086552';
+
+const danger100 = '#ffe9df';
+const danger300 = '#FFAEA1';
+const danger500 = '#FF6368';
+const danger700 = '#B7314D';
+const danger900 = '#7A133A';
+
+const warning100 = '#FEF5D3';
+const warning300 = '#FED67C';
+const warning500 = '#FCAA25';
+const warning700 = '#B56A12';
+const warning900 = '#783B07';
 
 export const Colors = {
   light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    text: neutral700,
+    background: paperwhite,
+    tint: neutral900,
+    icon: main500,
+    tabIconDefault: main500,
+    tabIconSelected: main900,
   },
   dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    text: neutral100,
+    background: neutral900,
+    tint: neutral100,
+    icon: main500,
+    tabIconDefault: main500,
+    tabIconSelected: main700,
   },
 };
