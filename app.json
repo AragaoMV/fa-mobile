@@ -17,7 +17,7 @@
       "supportsTablet": true
     },
     "android": {
-      "GoogleServiceFile":"./google-services.json",
+      "GoogleServiceFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -38,7 +38,8 @@
             "useFremeworks": "static"
           }
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true

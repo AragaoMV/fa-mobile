@@ -1,9 +1,12 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
+import styles from "./styles";
 
-export default function HomePage(){
-    return(
-        <Text>Olá Mundo</Text>
-
+export default function HomePage() {
+    const estilos = styles
+    return (
+        <View style={estilos.container} >
+            <Text style={estilos.texto}>Olá Mundo</Text>
+        </View>
     );
 }
