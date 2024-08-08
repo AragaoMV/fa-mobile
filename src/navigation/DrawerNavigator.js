@@ -15,7 +15,7 @@ const Drawer = createDrawerNavigator();
 
 const CustomDrawerContent = (props) => {
   return (
-    <View style={{ flex: 1, padding: 12, backgroundColor: Colors.neutral500 }}>
+    <View style={{ flex: 1, padding: 12, backgroundColor: Colors.neutral500, marginTop: 20}}>
       <View style={{padding: 12, flexDirection: "row",alignContent: 'center', justifyContent: 'center', marginBottom: 24}}>
         <Icon name="sports-football" size={32} color={Colors.main500} style={{marginTop:10}} />
         <Text style={styles.HeaderDrawerText}>FA Mobile</Text>
