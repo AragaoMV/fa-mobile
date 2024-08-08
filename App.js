@@ -1,14 +1,17 @@
 import * as React from "react";
 import { SafeAreaView } from "react-native";
-import HomePage from "./src/screens/HomePage";
+import { NavigationContainer } from "@react-navigation/native";
+import BottomTabNavigator from "./src/navigation/botTabNavigator";  // Importe o BottomTabNavigator
 import Fonts from "./src/constants/fonts";
 
 export default function App() {
   const fontsLoaded = Fonts();
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <HomePage />
-    </SafeAreaView>
+    <NavigationContainer >
+      <SafeAreaView style={{ flex: 1, }}>
+        <BottomTabNavigator /> 
+      </SafeAreaView>
+    </NavigationContainer>
   );
 }
