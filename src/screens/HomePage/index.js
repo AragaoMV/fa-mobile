@@ -6,7 +6,7 @@ export default function HomePage() {
     const estilos = styles
     return (
         <View style={estilos.container} >
-            <Text style={estilos.texto}>Olá Mundo</Text>
+            <Text style={estilos.texto}>Home Page</Text>
         </View>
     );
 }
