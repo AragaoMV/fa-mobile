@@ -21,7 +21,7 @@ export default function BottomTabNavigator() {
                 tabBarIcon: ({ focused, color }) => {
                     let iconName;
 
-                    if (route.name === 'Home') {
+                    if (route.name === 'Início') {
                         iconName = focused ? 'home' : 'home';
                     } else if (route.name === 'Ataque') {
                         iconName = focused ? 'directions-run' : 'directions-run';
@@ -42,15 +42,16 @@ export default function BottomTabNavigator() {
                 tabBarLabelStyle: {
                     fontSize: 12,
                     lineHeight: 18,
-                    fontFamily: 'Roboto-400Regular',
+                    fontFamily: 'Roboto_400Regular',
                 },
                 tabBarStyle: {
                     backgroundColor: Colors.neutral900,
                     borderTopWidth: 0,
+                    padding: 4
                 },
             })}
         >
-            <Tab.Screen name="Home" component={HomePage} />
+            <Tab.Screen name="Início" component={HomePage} />
             <Tab.Screen name="Ataque" component={AtkPage} />
             <Tab.Screen name="Defesa" component={DefPage} />
             <Tab.Screen name="Especiais" component={SpcPage} />
