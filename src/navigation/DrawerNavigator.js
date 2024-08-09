@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 20,
     padding: 12,
-    backgroundColor: Colors.neutral900,
+    backgroundColor: Colors.neutral500,
   },
   headerText: {
     fontSize: 32,

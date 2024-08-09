@@ -45,7 +45,7 @@ export default function BottomTabNavigator() {
                     fontFamily: 'Roboto_400Regular',
                 },
                 tabBarStyle: {
-                    backgroundColor: Colors.neutral900,
+                    backgroundColor: Colors.neutral500,
                     borderTopWidth: 0,
                     padding: 4
                 },
