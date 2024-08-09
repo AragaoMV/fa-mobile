@@ -9,6 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import HomePage from '../screens/HomePage';
 import PosicaoPage from '../screens/PosicaoPage';
+import DescubraPosicaoPage from '../screens/DescubraPosicaoPage';
 
 
 const Drawer = createDrawerNavigator();
@@ -29,6 +30,11 @@ const CustomDrawerContent = (props) => {
         label="Posição"
         icon="accessibility-new"
         onPress={() => props.navigation.navigate('Posição')}
+      />
+      <DrawerItem
+        label="Descubra sua Posição"
+        icon="info"
+        onPress={() => props.navigation.navigate('Descubra sua Posição')}
       />
     </View>
   );
@@ -76,6 +82,7 @@ const DrawerNavigator = () => {
       <Drawer.Screen name="Tabs" component={BottomTabNavigator} />
       <Drawer.Screen name="Pagina Inicial" component={HomePage} />
       <Drawer.Screen name="Posição" component={PosicaoPage} />
+      <Drawer.Screen name="Descubra sua Posição" component={DescubraPosicaoPage} />
     </Drawer.Navigator>
   );
 };
