@@ -1,0 +1,105 @@
+{
+    "posição": {
+      "ataque": [
+        {
+          "id": 1,
+          "nome": "Espada Longa",
+          "detalhes": "Uma espada longa usada para ataques poderosos de curta distância.",
+          "imagemUrl": "https://exemplo.com/espada_longa.png"
+        },
+        {
+          "id": 2,
+          "nome": "Arco e Flecha",
+          "detalhes": "Arma de ataque à distância, ideal para acertar inimigos de longe.",
+          "imagemUrl": "https://exemplo.com/arco_flecha.png"
+        }
+      ],
+      "defesa": [
+        {
+          "id": 3,
+          "nome": "Escudo de Ferro",
+          "detalhes": "Um escudo resistente feito de ferro, excelente para bloqueio de ataques.",
+          "imagemUrl": "https://exemplo.com/escudo_ferro.png"
+        },
+        {
+          "id": 4,
+          "nome": "Armadura de Aço",
+          "detalhes": "Uma armadura completa feita de aço, proporcionando alta defesa.",
+          "imagemUrl": "https://exemplo.com/armadura_aco.png"
+        }
+      ],
+      "especial": [
+        {
+          "id": 5,
+          "nome": "Poção de Cura",
+          "detalhes": "Uma poção especial que cura feridas e restaura a saúde rapidamente.",
+          "imagemUrl": "https://exemplo.com/pocao_cura.png"
+        },
+        {
+          "id": 6,
+          "nome": "Fogo Grego",
+          "detalhes": "Uma arma química antiga usada para incendiar inimigos e áreas.",
+          "imagemUrl": "https://exemplo.com/fogo_grego.png"
+        }
+      ]
+    },
+    "conceito": {
+      "geral": [
+        {
+          "id": 7,
+          "nome": "Resistência",
+          "detalhes": "A capacidade de suportar danos e continuar lutando.",
+          "imagemUrl": "https://exemplo.com/resistencia.png"
+        },
+        {
+          "id": 8,
+          "nome": "Agilidade",
+          "detalhes": "A habilidade de se mover rapidamente e evitar ataques.",
+          "imagemUrl": "https://exemplo.com/agilidade.png"
+        }
+      ],
+      "ataque": [
+        {
+          "id": 9,
+          "nome": "Força Bruta",
+          "detalhes": "O poder de causar dano massivo com ataques físicos.",
+          "imagemUrl": "https://exemplo.com/forca_bruta.png"
+        },
+        {
+          "id": 10,
+          "nome": "Precisão",
+          "detalhes": "A capacidade de acertar alvos com alta exatidão.",
+          "imagemUrl": "https://exemplo.com/precisao.png"
+        }
+      ],
+      "defesa": [
+        {
+          "id": 11,
+          "nome": "Resiliência",
+          "detalhes": "A capacidade de absorver impactos sem sofrer muito dano.",
+          "imagemUrl": "https://exemplo.com/resiliencia.png"
+        },
+        {
+          "id": 12,
+          "nome": "Reflexos",
+          "detalhes": "A habilidade de reagir rapidamente para se defender de ataques.",
+          "imagemUrl": "https://exemplo.com/reflexos.png"
+        }
+      ],
+      "especial": [
+        {
+          "id": 13,
+          "nome": "Magia de Cura",
+          "detalhes": "Uma habilidade especial para curar a si mesmo ou aliados.",
+          "imagemUrl": "https://exemplo.com/magia_cura.png"
+        },
+        {
+          "id": 14,
+          "nome": "Invisibilidade",
+          "detalhes": "A capacidade de se tornar invisível por um curto período.",
+          "imagemUrl": "https://exemplo.com/invisibilidade.png"
+        }
+      ]
+    }
+  }
+  
