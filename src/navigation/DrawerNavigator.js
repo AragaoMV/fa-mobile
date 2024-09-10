@@ -6,8 +6,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Colors from '../constants/colors';
 import { useNavigation } from '@react-navigation/native';
 import BottomTabNavigator from './botTabNavigator';
-
-import HomePage from '../screens/HomePage';
 import PosicaoPage from '../screens/PosicaoPage';
 import DescubraPosicaoPage from '../screens/DescubraPosicaoPage';
 
@@ -50,6 +48,7 @@ const DrawerItem = ({ label, icon, onPress }) => {
 };
 
 const CustomDrawerHeader = () => {
+
   const navigation = useNavigation();
 
   return (
@@ -80,7 +79,6 @@ const DrawerNavigator = () => {
       }}
     >
       <Drawer.Screen name="Tabs" component={BottomTabNavigator} />
-      {/*<Drawer.Screen name="Pagina Inicial" component={HomePage}> */}
       <Drawer.Screen name="Posição" component={PosicaoPage} />
       <Drawer.Screen name="Descubra sua Posição" component={DescubraPosicaoPage} />
     </Drawer.Navigator>
