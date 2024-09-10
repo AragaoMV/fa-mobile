@@ -4,8 +4,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Colors from '../constants/colors';
-import BottomTabNavigator from "./botTabNavigator";
 import { useNavigation } from '@react-navigation/native';
+import BottomTabNavigator from './botTabNavigator';
 
 import HomePage from '../screens/HomePage';
 import PosicaoPage from '../screens/PosicaoPage';
@@ -16,15 +16,15 @@ const Drawer = createDrawerNavigator();
 
 const CustomDrawerContent = (props) => {
   return (
-    <View style={{ flex: 1, padding: 12, backgroundColor: Colors.neutral500, marginTop: 20}}>
-      <View style={{padding: 12, flexDirection: "row",alignContent: 'center', justifyContent: 'center', marginBottom: 24}}>
-        <Icon name="sports-football" size={32} color={Colors.main500} style={{marginTop:10}} />
+    <View style={{ flex: 1, padding: 12, backgroundColor: Colors.neutral500, marginTop: 20 }}>
+      <View style={{ padding: 12, flexDirection: "row", alignContent: 'center', justifyContent: 'center', marginBottom: 24 }}>
+        <Icon name="sports-football" size={32} color={Colors.main500} style={{ marginTop: 10 }} />
         <Text style={styles.HeaderDrawerText}>FA Mobile</Text>
       </View>
       <DrawerItem
         label="Pagina Inicial"
         icon="home"
-        onPress={() => props.navigation.navigate('Pagina Inicial')}
+        onPress={() => props.navigation.navigate('Tabs')}
       />
       <DrawerItem
         label="Posição"
@@ -80,7 +80,7 @@ const DrawerNavigator = () => {
       }}
     >
       <Drawer.Screen name="Tabs" component={BottomTabNavigator} />
-      <Drawer.Screen name="Pagina Inicial" component={HomePage} />
+      {/*<Drawer.Screen name="Pagina Inicial" component={HomePage}> */}
       <Drawer.Screen name="Posição" component={PosicaoPage} />
       <Drawer.Screen name="Descubra sua Posição" component={DescubraPosicaoPage} />
     </Drawer.Navigator>
