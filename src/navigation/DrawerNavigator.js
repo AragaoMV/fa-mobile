@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Colors from '../constants/colors';
 import { useNavigation } from '@react-navigation/native';
 import BottomTabNavigator from './botTabNavigator';
-import PosicaoPage from '../screens/PosicaoPage';
+import PosicaoPage from '../screens/AtkPosPage';
 import DescubraPosicaoPage from '../screens/DescubraPosicaoPage';
 
 
@@ -20,8 +20,8 @@ const CustomDrawerContent = (props) => {
         <Text style={styles.HeaderDrawerText}>FA Mobile</Text>
       </View>
       <DrawerItem
-        label="Pagina Inicial"
-        icon="home"
+        label="Conceitos"
+        icon="menu_book"
         onPress={() => props.navigation.navigate('Tabs')}
       />
       <DrawerItem
