@@ -1,4 +1,3 @@
-// src/navigation/DrawerNavigator.js
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
@@ -6,8 +5,8 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Colors from '../constants/colors';
 import { useNavigation } from '@react-navigation/native';
 import BottomTabNavigator from './botTabNavigator';
-import PosicaoPage from '../screens/AtkPosPage';
 import DescubraPosicaoPage from '../screens/DescubraPosicaoPage';
+import TopTabNavigator from './topTabNavigator';
 
 
 const Drawer = createDrawerNavigator();
@@ -21,7 +20,7 @@ const CustomDrawerContent = (props) => {
       </View>
       <DrawerItem
         label="Conceitos"
-        icon="menu_book"
+        icon="menu-book"
         onPress={() => props.navigation.navigate('Tabs')}
       />
       <DrawerItem
@@ -79,7 +78,7 @@ const DrawerNavigator = () => {
       }}
     >
       <Drawer.Screen name="Tabs" component={BottomTabNavigator} />
-      <Drawer.Screen name="Posição" component={PosicaoPage} />
+      <Drawer.Screen name="Posição" component={TopTabNavigator} />
       <Drawer.Screen name="Descubra sua Posição" component={DescubraPosicaoPage} />
     </Drawer.Navigator>
   );

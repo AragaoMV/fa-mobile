@@ -4,7 +4,7 @@ import { onValue, ref } from "firebase/database";
 import { db } from "../../database/config"; 
 import styles from "./styles";
 
-export default function PosicaoPage() {
+export default function DefPosPage() {
     const estilos = styles
     const [todoData, setTodoData] = useState([])
     useEffect(() => {
@@ -24,7 +24,7 @@ export default function PosicaoPage() {
 
     return (
         <View style={estilos.container} >
-            <Text style={estilos.texto}>Posicao Defesa Page</Text>
+            <Text style={estilos.texto}>Posicao Page</Text>
             <View>
                 {
                     todoData.map((item, index) => {

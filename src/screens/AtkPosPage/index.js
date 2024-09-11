@@ -4,7 +4,7 @@ import { onValue, ref } from "firebase/database";
 import { db } from "../../database/config"; 
 import styles from "./styles";
 
-export default function PosicaoPage() {
+export default function AtkPosPage() {
     const estilos = styles
     const [todoData, setTodoData] = useState([])
     useEffect(() => {
