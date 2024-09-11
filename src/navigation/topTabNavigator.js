@@ -16,9 +16,7 @@ export default function TopTabNavigator() {
                 tabBarIcon: ({ color }) => {
                     let iconName;
 
-                    if (route.name === 'Início') {
-                        iconName = 'home';
-                    } else if (route.name === 'Ataque') {
+                    if (route.name === 'Ataque') {
                         iconName = 'directions-run';
                     } else if (route.name === 'Defesa') {
                         iconName = 'shield';
