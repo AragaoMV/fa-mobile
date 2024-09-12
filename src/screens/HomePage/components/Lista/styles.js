@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     text: {
-        color: Colors.neutral100, // Substitua pela cor correta
+        color: Colors.neutral100,
         textAlign: 'justify',
         fontFamily: 'Roboto_400Regular',
         fontSize: 12,

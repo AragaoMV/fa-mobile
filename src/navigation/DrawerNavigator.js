@@ -8,7 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 import BottomTabNavigator from './botTabNavigator';
 import DescubraPosicaoPage from '../screens/DescubraPosicaoPage';
 import TopTabNavigator from './topTabNavigator';
-import DetailsPage from '../screens/DetailsPage'; // Importando a nova tela de detalhes
+import DetailsPage from '../screens/DetailsPage';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -18,7 +18,7 @@ function HomeStackNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,  // Oculta o cabeçalho para todas as telas deste Stack
+        headerShown: false, 
       }}
     >
       <Stack.Screen name="Tabs" component={BottomTabNavigator} />
