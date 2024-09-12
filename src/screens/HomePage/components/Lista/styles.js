@@ -5,7 +5,7 @@ const screenWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
     container: {
-        display:"flex",
+        display: "flex",
         width: screenWidth,
         flexShrink: 0,
         height: 54,
@@ -14,20 +14,20 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: Colors.neutral500,
-        marginVertical: 8, // Espaçamento entre os cards
+        marginVertical: 8,
         // Efeito de sombra para Android
         elevation: 3,
         // Efeito de sombra para iOS
-        shadowColor: '#000', 
+        shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
     },
     cardContent: {
-        flexDirection: 'row', // Alinhar o texto e o ícone na mesma linha
-        justifyContent: 'space-between', // Espaçar os itens uniformemente
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        width: '100%', // Garante que o conteúdo ocupe toda a largura disponível
+        width: '100%',
     },
     text: {
         color: Colors.neutral100, // Substitua pela cor correta
