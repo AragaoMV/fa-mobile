@@ -1,5 +1,6 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createStackNavigator } from '@react-navigation/stack';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Colors from '../constants/colors';
@@ -7,9 +8,24 @@ import { useNavigation } from '@react-navigation/native';
 import BottomTabNavigator from './botTabNavigator';
 import DescubraPosicaoPage from '../screens/DescubraPosicaoPage';
 import TopTabNavigator from './topTabNavigator';
-
+import DetailsPage from '../screens/DetailsPage'; // Importando a nova tela de detalhes
 
 const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
+
+// Função para gerenciar navegação dentro do Stack Navigator
+function HomeStackNavigator() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,  // Oculta o cabeçalho para todas as telas deste Stack
+      }}
+    >
+      <Stack.Screen name="Tabs" component={BottomTabNavigator} />
+      <Stack.Screen name="Detalhes" component={DetailsPage} />
+    </Stack.Navigator>
+  );
+}
 
 const CustomDrawerContent = (props) => {
   return (
@@ -47,7 +63,6 @@ const DrawerItem = ({ label, icon, onPress }) => {
 };
 
 const CustomDrawerHeader = () => {
-
   const navigation = useNavigation();
 
   return (
@@ -77,7 +92,7 @@ const DrawerNavigator = () => {
         },
       }}
     >
-      <Drawer.Screen name="Tabs" component={BottomTabNavigator} />
+      <Drawer.Screen name="HomeStack" component={HomeStackNavigator} />
       <Drawer.Screen name="Posição" component={TopTabNavigator} />
       <Drawer.Screen name="Descubra sua Posição" component={DescubraPosicaoPage} />
     </Drawer.Navigator>
