@@ -1,17 +1,18 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import styles from "./styles";
-import Lista from "./components/Lista/Lista";
+import Topo from "./components/Topo";
+import Lista from "./components/Lista";
 
 
 export default function HomePage() {
     const estilos = styles
     return (
 
-        <View style={estilos.container} >
-            <Text style={estilos.texto}>Home Page</Text>
+        <ScrollView style={estilos.container} >
+            <Topo />
             <Lista />
-        </View>
+        </ScrollView>
 
     );
 }

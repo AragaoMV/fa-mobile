@@ -33,6 +33,8 @@ export default function Lista() {
 
   return (
     <View>
+      <Text style={styles.listTitle}> Sobre o Esporte</Text>
+
       {todoData.map((item, index) => (
         <TouchableOpacity key={index} onPress={() => handlePress(item)} style={styles.container}>
           <View style={styles.cardContent}>

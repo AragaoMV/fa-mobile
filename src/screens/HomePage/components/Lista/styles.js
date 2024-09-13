@@ -37,6 +37,14 @@ const styles = StyleSheet.create({
         fontStyle: 'normal',
         lineHeight: 18,
     },
+    listTitle:{
+        color: Colors.neutral100,
+        textAlign: "left",
+        padding: 12,
+        fontFamily: 'Roboto_700Bold',
+        fontSize: 28,
+        fontHeight: 42,
+    }
 });
 
 export default styles;
