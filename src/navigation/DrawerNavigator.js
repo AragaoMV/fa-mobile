@@ -1,7 +1,7 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Colors from '../constants/colors';
 import { useNavigation } from '@react-navigation/native';
@@ -29,11 +29,11 @@ function HomeStackNavigator() {
 
 const CustomDrawerContent = (props) => {
   return (
-    <View style={{ flex: 1, padding: 12, backgroundColor: Colors.neutral500, marginTop: 20 }}>
-      <View style={{ padding: 12, flexDirection: "row", alignContent: 'center', justifyContent: 'center', marginBottom: 24 }}>
+    <SafeAreaView style={{ flex: 1, padding: 12, backgroundColor: Colors.neutral500}}>
+      <SafeAreaView style={{ padding: 12, flexDirection: "row", alignContent: 'center', justifyContent: 'center', marginBottom: 24 }}>
         <Icon name="sports-football" size={32} color={Colors.main500} style={{ marginTop: 10 }} />
         <Text style={styles.HeaderDrawerText}>FA Mobile</Text>
-      </View>
+      </SafeAreaView>
       <DrawerItem
         label="Conceitos"
         icon="menu-book"
@@ -49,7 +49,7 @@ const CustomDrawerContent = (props) => {
         icon="info"
         onPress={() => props.navigation.navigate('Descubra sua Posição')}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -66,12 +66,12 @@ const CustomDrawerHeader = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.headerContainer}>
+    <SafeAreaView style={styles.headerContainer}>
       <TouchableOpacity onPress={() => navigation.openDrawer()}>
         <Icon name="menu" size={32} color={Colors.main500} />
       </TouchableOpacity>
       <Text style={styles.headerText}>FA Mobile</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -104,7 +104,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 20,
     padding: 12,
     backgroundColor: Colors.neutral500,
   },
