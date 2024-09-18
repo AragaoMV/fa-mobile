@@ -1,7 +1,7 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Text, View, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Colors from '../constants/colors';
 import { useNavigation } from '@react-navigation/native';
@@ -18,7 +18,7 @@ function HomeStackNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false, 
+        headerShown: false,
       }}
     >
       <Stack.Screen name="Tabs" component={BottomTabNavigator} />
@@ -29,11 +29,11 @@ function HomeStackNavigator() {
 
 const CustomDrawerContent = (props) => {
   return (
-    <SafeAreaView style={{ flex: 1, padding: 12, backgroundColor: Colors.neutral500}}>
-      <SafeAreaView style={{ padding: 12, flexDirection: "row", alignContent: 'center', justifyContent: 'center', marginBottom: 24 }}>
+    <View style={{ flex: 1, padding: 12, backgroundColor: Colors.neutral500 }}>
+      <View style={{ padding: 12, flexDirection: "row", alignContent: 'center', justifyContent: 'center', marginBottom: 24 }}>
         <Icon name="sports-football" size={32} color={Colors.main500} style={{ marginTop: 10 }} />
         <Text style={styles.HeaderDrawerText}>FA Mobile</Text>
-      </SafeAreaView>
+      </View>
       <DrawerItem
         label="Conceitos"
         icon="menu-book"
@@ -49,7 +49,7 @@ const CustomDrawerContent = (props) => {
         icon="info"
         onPress={() => props.navigation.navigate('Descubra sua Posição')}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -66,12 +66,12 @@ const CustomDrawerHeader = () => {
   const navigation = useNavigation();
 
   return (
-    <SafeAreaView style={styles.headerContainer}>
+    <View style={styles.headerContainer}>
       <TouchableOpacity onPress={() => navigation.openDrawer()}>
         <Icon name="menu" size={32} color={Colors.main500} />
       </TouchableOpacity>
       <Text style={styles.headerText}>FA Mobile</Text>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -106,14 +106,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 12,
     backgroundColor: Colors.neutral500,
+    width: '100%',
   },
   headerText: {
     fontSize: 32,
     lineHeight: 48,
-    width: '87%',
     textAlign: 'center',
     fontFamily: 'Roboto_700Bold',
     color: Colors.main500,
+    flex: 1,
   },
   drawerItem: {
     flexDirection: 'row',
