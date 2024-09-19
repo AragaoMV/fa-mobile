@@ -3,6 +3,7 @@ import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 import Colors from "../../../../constants/colors";
 import { MaterialIcons } from "@expo/vector-icons";
+import CustomModal from "./Modal"; // Importando a modal personalizada
 
 export default function Formulario() {
   // Estados para armazenar os dados de cada campo
@@ -10,6 +11,9 @@ export default function Formulario() {
   const [peso, setPeso] = useState("");
   const [forca, setForca] = useState("");
   const [velocidade, setVelocidade] = useState("");
+
+  // Estado para controlar a visibilidade da modal
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <View style={styles.container}>
@@ -48,7 +52,7 @@ export default function Formulario() {
       {/* Campo Força */}
       <View style={styles.topoCampo}>
         <Text style={styles.tituloCampo}>Força</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => setModalVisible(true)}>
           <MaterialIcons name="info-outline" size={16} color={Colors.main500} />
         </TouchableOpacity>
       </View>
@@ -100,6 +104,9 @@ export default function Formulario() {
           <Text style={styles.btnText}>Analisar</Text>
         </TouchableOpacity>
       </View>
+
+      {/* Modal Personalizada */}
+      <CustomModal visible={modalVisible} onClose={() => setModalVisible(false)} />
     </View>
   );
 }
