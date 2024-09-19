@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 import Colors from "../../../../constants/colors";
 import { MaterialIcons } from "@expo/vector-icons";
 
 export default function Formulario() {
-  const [value, setValue] = useState(""); // State to track input value
+  const [value, setValue] = useState("");
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       {/* Campo Altura */}
       <View style={styles.topoCampo}>
         <Text style={styles.tituloCampo}>Altura (cm)</Text>
@@ -78,6 +78,11 @@ export default function Formulario() {
           placeholderTextColor="transparent" // Hide the default placeholder
         />
       </View>
-    </ScrollView>
+      <View style={styles.btnContainer}>
+        <TouchableOpacity style={styles.btnStyle}>
+          <Text style={styles.btnText}>Analizar</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 }

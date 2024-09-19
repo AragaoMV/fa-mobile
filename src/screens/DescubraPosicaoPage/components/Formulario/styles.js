@@ -38,14 +38,34 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontStyle: "normal",
         lineHeight: 18,
-       
-        marginBottom: 8,
+        marginBottom: 4,
     },
     topoCampo: {
         flexDirection: "row",
         justifyContent: "space-between",
         width: "100%",
         marginTop: 12,
+    },
+    btnContainer: {
+        flexDirection: "row",
+        justifyContent: "center",
+        width: "100%",
+        marginTop: 32,
+        marginBottom: 32,
+    },
+    btnText: {
+        fontFamily: "Roboto_400Regular",
+        fontSize: 12,
+        lineHeight: 18,
+    },
+    btnStyle: {
+        height: 40,
+        width: '100%',
+        borderRadius: 4,
+        padding: 12,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: Colors.main500,
     },
 });
 

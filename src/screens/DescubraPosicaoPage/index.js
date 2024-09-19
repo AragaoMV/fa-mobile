@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import styles from "./styles";
 import Topo from "./components/Topo";
 import Formulario from "./components/Formulario";
@@ -7,9 +7,9 @@ import Formulario from "./components/Formulario";
 export default function DescubraPosicaoPage() {
     const estilos = styles
     return (
-        <View style={estilos.container} >
+        <ScrollView style={estilos.container} >
             <Topo/>
             <Formulario/>
-        </View>
+        </ScrollView>
     );
 }
