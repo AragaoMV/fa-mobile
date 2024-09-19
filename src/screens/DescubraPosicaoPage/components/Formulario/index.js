@@ -12,8 +12,9 @@ export default function Formulario() {
   const [forca, setForca] = useState("");
   const [velocidade, setVelocidade] = useState("");
 
-  // Estado para controlar a visibilidade da modal
-  const [modalVisible, setModalVisible] = useState(false);
+  // Estados para controlar a visibilidade das modais
+  const [modalForcaVisible, setModalForcaVisible] = useState(false);
+  const [modalVelocidadeVisible, setModalVelocidadeVisible] = useState(false);
 
   return (
     <View style={styles.container}>
@@ -52,7 +53,7 @@ export default function Formulario() {
       {/* Campo Força */}
       <View style={styles.topoCampo}>
         <Text style={styles.tituloCampo}>Força</Text>
-        <TouchableOpacity onPress={() => setModalVisible(true)}>
+        <TouchableOpacity onPress={() => setModalForcaVisible(true)}>
           <MaterialIcons name="info-outline" size={16} color={Colors.main500} />
         </TouchableOpacity>
       </View>
@@ -71,7 +72,7 @@ export default function Formulario() {
       {/* Campo Velocidade */}
       <View style={styles.topoCampo}>
         <Text style={styles.tituloCampo}>Velocidade</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => setModalVelocidadeVisible(true)}>
           <MaterialIcons name="info-outline" size={16} color={Colors.main500} />
         </TouchableOpacity>
       </View>
@@ -105,8 +106,19 @@ export default function Formulario() {
         </TouchableOpacity>
       </View>
 
-      {/* Modal Personalizada */}
-      <CustomModal visible={modalVisible} onClose={() => setModalVisible(false)} />
+      {/* Modal Personalizada para o campo Força */}
+      <CustomModal
+        visible={modalForcaVisible}
+        onClose={() => setModalForcaVisible(false)}
+        message="Insira o número de flexões que você consegue fazer em 1 minuto"
+      />
+
+      {/* Modal Personalizada para o campo Velocidade */}
+      <CustomModal
+        visible={modalVelocidadeVisible}
+        onClose={() => setModalVelocidadeVisible(false)}
+        message="Insira o seu tempo da corrida de 40 jardas"
+      />
     </View>
   );
 }

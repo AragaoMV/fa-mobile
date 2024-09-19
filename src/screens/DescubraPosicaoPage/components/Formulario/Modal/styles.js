@@ -21,14 +21,15 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto_400Regular",
     fontSize: 16,
     lineHeight: 24,
-    color: Colors.main500, // Cor do texto
+    color: Colors.neutral100, // Cor do texto
     marginBottom: 10,
     textAlign: 'center',
   },
   okButton: {
     backgroundColor: Colors.main500, // Cor do botão
-    padding: 8,
     borderRadius: 4,
+    marginTop: 10,
+    marginBottom: 16,
     alignItems: 'center',
     justifyContent: 'center',
   },
