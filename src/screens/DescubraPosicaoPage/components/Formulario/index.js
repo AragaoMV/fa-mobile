@@ -5,7 +5,11 @@ import Colors from "../../../../constants/colors";
 import { MaterialIcons } from "@expo/vector-icons";
 
 export default function Formulario() {
-  const [value, setValue] = useState("");
+  // Estados para armazenar os dados de cada campo
+  const [altura, setAltura] = useState("");
+  const [peso, setPeso] = useState("");
+  const [forca, setForca] = useState("");
+  const [velocidade, setVelocidade] = useState("");
 
   return (
     <View style={styles.container}>
@@ -13,30 +17,30 @@ export default function Formulario() {
       <View style={styles.topoCampo}>
         <Text style={styles.tituloCampo}>Altura (cm)</Text>
       </View>
-      {/* Custom Placeholder */}
       <View style={styles.inputWrapper}>
-        {!value && <Text style={styles.customPlaceholder}>Altura</Text>}
+        {!altura && <Text style={styles.customPlaceholder}>Altura</Text>}
         <TextInput
           style={styles.formulairo}
+          maxLength={3}
           keyboardType="number-pad"
-          onChangeText={setValue}
-          value={value}
+          onChangeText={setAltura}
+          value={altura}
           placeholderTextColor="transparent" // Hide the default placeholder
         />
-
       </View>
+
       {/* Campo Peso */}
       <View style={styles.topoCampo}>
         <Text style={styles.tituloCampo}>Peso (kg)</Text>
       </View>
-      {/* Custom Placeholder */}
       <View style={styles.inputWrapper}>
-        {!value && <Text style={styles.customPlaceholder}>Peso</Text>}
+        {!peso && <Text style={styles.customPlaceholder}>Peso</Text>}
         <TextInput
           style={styles.formulairo}
+          maxLength={3}
           keyboardType="number-pad"
-          onChangeText={setValue}
-          value={value}
+          onChangeText={setPeso}
+          value={peso}
           placeholderTextColor="transparent" // Hide the default placeholder
         />
       </View>
@@ -48,14 +52,14 @@ export default function Formulario() {
           <MaterialIcons name="info-outline" size={16} color={Colors.main500} />
         </TouchableOpacity>
       </View>
-      {/* Custom Placeholder */}
       <View style={styles.inputWrapper}>
-        {!value && <Text style={styles.customPlaceholder}>Força</Text>}
+        {!forca && <Text style={styles.customPlaceholder}>Força</Text>}
         <TextInput
           style={styles.formulairo}
           keyboardType="number-pad"
-          onChangeText={setValue}
-          value={value}
+          maxLength={3}
+          onChangeText={setForca}
+          value={forca}
           placeholderTextColor="transparent" // Hide the default placeholder
         />
       </View>
@@ -67,20 +71,33 @@ export default function Formulario() {
           <MaterialIcons name="info-outline" size={16} color={Colors.main500} />
         </TouchableOpacity>
       </View>
-      {/* Custom Placeholder */}
       <View style={styles.inputWrapper}>
-        {!value && <Text style={styles.customPlaceholder}>Velocidade</Text>}
+        {!velocidade && <Text style={styles.customPlaceholder}>Velocidade</Text>}
         <TextInput
           style={styles.formulairo}
-          keyboardType="number-pad"
-          onChangeText={setValue}
-          value={value}
+          keyboardType="decimal-pad"
+          onChangeText={setVelocidade}
+          value={velocidade}
           placeholderTextColor="transparent" // Hide the default placeholder
         />
       </View>
+
+      {/* Botão para coletar os dados */}
       <View style={styles.btnContainer}>
-        <TouchableOpacity style={styles.btnStyle}>
-          <Text style={styles.btnText}>Analizar</Text>
+        <TouchableOpacity
+          style={styles.btnStyle}
+          onPress={() => {
+            // Coletando os dados inseridos no formulário
+            const formData = {
+              altura,
+              peso,
+              forca,
+              velocidade,
+            };
+            console.log(formData); // Apenas imprime os dados no console, sem realizar nenhuma ação por enquanto
+          }}
+        >
+          <Text style={styles.btnText}>Analisar</Text>
         </TouchableOpacity>
       </View>
     </View>
