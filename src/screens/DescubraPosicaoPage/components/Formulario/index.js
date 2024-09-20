@@ -3,7 +3,7 @@ import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 import Colors from "../../../../constants/colors";
 import { MaterialIcons } from "@expo/vector-icons";
-import CustomModal from "./Modal"; // Importando a modal personalizada
+import CustomModal from "./Modal";
 
 export default function Formulario() {
   // Estados para armazenar os dados de cada campo
@@ -15,6 +15,46 @@ export default function Formulario() {
   // Estados para controlar a visibilidade das modais
   const [modalForcaVisible, setModalForcaVisible] = useState(false);
   const [modalVelocidadeVisible, setModalVelocidadeVisible] = useState(false);
+  const [modalPosicaoVisible, setModalPosicaoVisible] = useState(false);
+  const [posicaoRecomendada, setPosicaoRecomendada] = useState("");
+
+  const handleAnalisar = () => {
+    // Coletando os dados inseridos no formulário
+    const formData = {
+      altura: parseFloat(altura),
+      peso: parseFloat(peso),
+      forca: parseFloat(forca),
+      velocidade: parseFloat(velocidade),
+    };
+
+    // Aplicando as condicionais para definir a posição recomendada
+    let posicao = '';
+    if (formData.altura > 180 && formData.peso > 100 && formData.velocidade >= 6 && formData.forca >= 40) {
+      posicao = 'OL/DL';
+    } else if (formData.altura > 180 && formData.peso > 80 && formData.forca > 30 && formData.velocidade <= 5.5) {
+      posicao = 'TE';
+    } else if (formData.altura > 175 && formData.peso > 80 && formData.forca > 30 && formData.velocidade <= 5.5) {
+      posicao = 'LB';
+    } else if (formData.altura >= 176 && formData.forca > 30 && formData.velocidade <= 5) {
+      posicao = 'DB';
+    } else if (formData.altura >= 176 && formData.peso <= 90 && formData.velocidade <= 5) {
+      posicao = 'WR';
+    } else if (formData.altura < 175 && formData.peso >= 70 && formData.forca > 30 && formData.velocidade <= 4.7) {
+      posicao = 'RB';
+    } else {
+      posicao = 'Posição não encontrada';
+    }
+
+    // Definindo a posição recomendada no estado e exibindo a modal
+    setPosicaoRecomendada(posicao);
+    setModalPosicaoVisible(true);
+
+    // Limpando os campos do formulário
+    setAltura("");
+    setPeso("");
+    setForca("");
+    setVelocidade("");
+  };
 
   return (
     <View style={styles.container}>
@@ -80,7 +120,7 @@ export default function Formulario() {
         {!velocidade && <Text style={styles.customPlaceholder}>Velocidade</Text>}
         <TextInput
           style={styles.formulairo}
-          keyboardType="decimal-pad"
+          keyboardType="numeric"
           onChangeText={setVelocidade}
           value={velocidade}
           placeholderTextColor="transparent" // Hide the default placeholder
@@ -91,16 +131,7 @@ export default function Formulario() {
       <View style={styles.btnContainer}>
         <TouchableOpacity
           style={styles.btnStyle}
-          onPress={() => {
-            // Coletando os dados inseridos no formulário
-            const formData = {
-              altura,
-              peso,
-              forca,
-              velocidade,
-            };
-            console.log(formData); // Apenas imprime os dados no console, sem realizar nenhuma ação por enquanto
-          }}
+          onPress={handleAnalisar}
         >
           <Text style={styles.btnText}>Analisar</Text>
         </TouchableOpacity>
@@ -118,6 +149,13 @@ export default function Formulario() {
         visible={modalVelocidadeVisible}
         onClose={() => setModalVelocidadeVisible(false)}
         message="Insira o seu tempo da corrida de 40 jardas"
+      />
+
+      {/* Modal para mostrar a posição recomendada */}
+      <CustomModal
+        visible={modalPosicaoVisible}
+        onClose={() => setModalPosicaoVisible(false)}
+        message={`Posição recomendada: ${posicaoRecomendada}`}
       />
     </View>
   );
