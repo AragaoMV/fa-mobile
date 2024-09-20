@@ -29,7 +29,7 @@ export default function Formulario() {
 
     // Aplicando as condicionais para definir a posição recomendada
     let posicao = '';
-    if (formData.altura > 180 && formData.peso > 100 && formData.velocidade >= 6 && formData.forca >= 40) {
+    if (formData.peso > 90 && formData.velocidade >= 6 && formData.forca >= 40) {
       posicao = 'OL/DL';
     } else if (formData.altura > 180 && formData.peso > 80 && formData.forca > 30 && formData.velocidade <= 5.5) {
       posicao = 'TE';
@@ -83,7 +83,7 @@ export default function Formulario() {
         <TextInput
           style={styles.formulairo}
           maxLength={3}
-          keyboardType="number-pad"
+          keyboardType="decimal-pad"
           onChangeText={setPeso}
           value={peso}
           placeholderTextColor="transparent" // Hide the default placeholder
@@ -101,7 +101,7 @@ export default function Formulario() {
         {!forca && <Text style={styles.customPlaceholder}>Força</Text>}
         <TextInput
           style={styles.formulairo}
-          keyboardType="number-pad"
+          keyboardType="decimal-pad"
           maxLength={3}
           onChangeText={setForca}
           value={forca}
