@@ -1,6 +1,4 @@
-<p align="center">
-<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
-</p>
+
 <h1> FA Mobile </h1>
 
 O App é um guia de futebol americano, onde busca trazer conhecimento teorica para atletas e simpatizantes do esporte
@@ -10,6 +8,10 @@ Conceitos do esporte, sobre o ataque, defesa e times especiais
 Página com explicações de todas as posições
 Formulario para identificar qual posição pode combinar melhor com você.
 
+<h3>Prototipo</h3>
+<p>https://www.figma.com/proto/IwF97D01OtOjiNf6iS3ffa/FA-Mobile?page-id=0%3A1&node-id=9-108&node-type=canvas&viewport=1161%2C575%2C0.24&t=S0y0QsvnZAtsvPMS-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2%3A136</p>
+<h4>Stack</h4>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40"/><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" width="40" height="40"/></p>
 ### Get started
 
 1. Install dependencies
